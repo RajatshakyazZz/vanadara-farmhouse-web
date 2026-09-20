@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VARANADAH — THE FARMSTAY
+> *“Breath. Unwind. Rejoice.”*
 
-## Getting Started
+A website built for **VARANADAH**, a boutique luxury countryside farmhouse retreat surrounded by mountain views, open skies, and centered around the signature L-shaped architecture and expansive wrap-around verandah.
 
-First, run the development server:
+---
 
+## 🌄 Project Highlights & Brand Identity
+
+- **Brand Architecture**: Distinctive L-shaped farmhouse with traditional terracotta Mangalore-tiled roof, aged timber rafters, and stone masonry porch.
+- **The Verandah Life**: Highlights the spacious wrap-around porch as the heart and soul of the farmstay experience.
+- **Slow Living Philosophy**: Visual and emotional cadence guiding visitors through:
+  `PAUSE` → `BREATHE` → `CONNECT` → `REJOICE`
+- **Curated Experiences**: Mountain views, morning yoga at dawn, campfire evenings beneath starry skies, authentic home-cooked desi delicacies, modern comfort, and cherished time together.
+- **Culinary Showcase**: Farm-to-table dining celebrating regional flavours and city-style cuisine on a communal wooden table.
+- **Interactive Gallery**: Masonry visual chronicles with category filtering (All, The Farmhouse, Verandah, Nature, Food, Moments) and full-screen keyboard-accessible Lightbox modal.
+- **Location Section**: Topographic map card with transit travel times (airport, railway, highway access).
+- **Direct Reservation Enquiries**: Seamless WhatsApp integration and interactive booking enquiry modal with zero third-party commissions.
+- **Configurable Settings**: Single configuration file (`src/config/site.ts`) for easily updating host phone/WhatsApp numbers, address details, and directions without altering UI code.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router, Turbopack)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Typography**: Google Fonts via `next/font/google` (`Cormorant Garamond` & `Plus Jakarta Sans`)
+- **Icons**: [Lucide React](https://lucide.dev/) + Custom Brand SVG Emblems
+- **Motion & Interaction**: Smooth scrolling, image zoom hover transitions, and accessible modal dialogs.
+- **SEO & Metadata**: Dynamic `sitemap.xml`, `robots.txt`, OpenGraph cards, Twitter preview, and vector favicon.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Install Dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Run Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Build for Production
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ⚙️ Configuration
 
-To learn more about Next.js, take a look at the following resources:
+Property details, WhatsApp contact number, and map directions can be customized in [`src/config/site.ts`](src/config/site.ts):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```typescript
+export const siteConfig = {
+  brand: {
+    name: "VARANADAH",
+    subName: "THE FARMSTAY",
+    tagline: "Breath. Unwind. Rejoice.",
+    ...
+  },
+  contact: {
+    whatsappNumber: "91XXXXXXXXXX", // Replace with owner's number
+    email: "enquiries@varanadah.com",
+    ...
+  },
+  ...
+};
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2026 Varanadah. All rights reserved.
