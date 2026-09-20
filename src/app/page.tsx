@@ -4,11 +4,11 @@ import React, { useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { IntroSection } from "@/components/sections/IntroSection";
-import { VerandahSection } from "@/components/sections/VerandahSection";
+import { VerandahInteractiveExplorer } from "@/components/sections/VerandahInteractiveExplorer";
 import { DayNightSection } from "@/components/sections/DayNightSection";
 import { ExperienceGridSection } from "@/components/sections/ExperienceGridSection";
 import { FoodSection } from "@/components/sections/FoodSection";
-import { StaySection } from "@/components/sections/StaySection";
+import { StayInteractiveSection } from "@/components/sections/StayInteractiveSection";
 import { GallerySection } from "@/components/sections/GallerySection";
 import { LocationSection } from "@/components/sections/LocationSection";
 import { BookingCtaSection } from "@/components/sections/BookingCtaSection";
@@ -22,7 +22,7 @@ export default function HomePage() {
   const closeBooking = () => setIsBookingOpen(false);
 
   return (
-    <div className="relative min-h-screen flex flex-col bg-[#FAF8F5] text-[#241B16] selection:bg-[#BD5B3E] selection:text-white">
+    <div className="relative min-h-screen flex flex-col bg-[#FAF7F2] text-[#221813] selection:bg-[#BA563B] selection:text-white">
       {/* Top Floating Glassmorphism Navbar */}
       <Navbar onOpenBooking={openBooking} />
 
@@ -33,8 +33,8 @@ export default function HomePage() {
         {/* Section 2: Introduction — More Than a Farmhouse */}
         <IntroSection />
 
-        {/* Section 3: The Verandah — Life Happens on the Verandah */}
-        <VerandahSection />
+        {/* Section 3: The Centerpiece Interactive Verandah & Hotspot Explorer with Day/Night Soundscapes */}
+        <VerandahInteractiveExplorer />
 
         {/* Section 4: Morning & Evening Experience */}
         <DayNightSection />
@@ -45,8 +45,8 @@ export default function HomePage() {
         {/* Section 6: Food Experience — Good Food. Shared Slowly */}
         <FoodSection />
 
-        {/* Section 7: Stay in Comfort — Rustic Soul. Modern Comfort */}
-        <StaySection />
+        {/* Section 7: Stay in Comfort — Rustic Soul. Modern Comfort & Suite Explorer */}
+        <StayInteractiveSection onOpenBooking={openBooking} />
 
         {/* Section 8: Gallery with Categories & Lightbox */}
         <GallerySection />

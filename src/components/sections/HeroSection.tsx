@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ChevronDown, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 interface HeroSectionProps {
@@ -31,13 +31,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBooking }) => {
         />
         {/* Subtle Dark & Earthy Gradient Overlay for Optimal Legibility */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
-        <div className="absolute inset-0 bg-[#121E17]/25 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-[#0E1A14]/30 mix-blend-multiply" />
       </div>
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center text-white flex flex-col items-center mt-12 sm:mt-8">
         {/* Brand Tagline Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 sm:mb-8 animate-fade-in">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 sm:mb-8">
           <Sparkles size={13} className="text-[#D8BA74]" />
           <span className="text-[10px] sm:text-xs tracking-[0.3em] uppercase text-[#F7F3EC] font-medium">
             {siteConfig.brand.tagline}
@@ -68,7 +68,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBooking }) => {
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full sm:w-auto">
           <button
             onClick={onOpenBooking}
-            className="w-full sm:w-auto px-8 py-4 bg-[#BD5B3E] hover:bg-[#A84F35] text-white text-xs font-semibold uppercase tracking-[0.25em] rounded-sm transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+            className="w-full sm:w-auto px-8 py-4 bg-[#BA563B] hover:bg-[#A1452D] text-white text-xs font-semibold uppercase tracking-[0.25em] rounded-sm transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
           >
             BOOK YOUR STAY
           </button>
@@ -92,7 +92,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBooking }) => {
           SCROLL TO EXPLORE
         </span>
         <div className="w-5 h-8 rounded-full border border-white/40 flex items-start justify-center p-1">
-          <div className="w-1 h-2 bg-[#D8BA74] rounded-full animate-bounce mt-0.5" />
+          <div className="w-1 h-2 bg-[#D8BA74] rounded-full animate-pulse mt-0.5" />
         </div>
       </button>
     </section>
